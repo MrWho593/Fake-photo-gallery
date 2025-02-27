@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home({ photos, deletePhoto }) {
   return (
     <div>
-      <h1>Photo Gallery</h1>
-      <Link to="/add"><button>Add New Photo</button></Link>
+      <h1 className="p-home">Photo Gallery</h1>
+      <Link to="/add"><button className="a-btn">Add New Photo</button></Link>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px" }}>
         {photos.map(photo => (
           <div key={photo.id} style={{ border: "1px solid #ddd", padding: "10px" }}>

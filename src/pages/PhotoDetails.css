@@ -1,0 +1,18 @@
+.photo-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .photo-details img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .photo-details p {
+    font-size: 16px;
+    color: #666;
+  }
+  

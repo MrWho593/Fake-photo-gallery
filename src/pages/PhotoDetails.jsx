@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import "./PhotoDetails.css";
 
 function PhotoDetails() {
   const { id } = useParams();
@@ -16,10 +17,10 @@ function PhotoDetails() {
 
   return (
     <div>
-      <h1>{photo.title}</h1>
+      <h1 className="p-details">{photo.title}</h1>
       <img src={photo.url} alt={photo.title} width="300" />
       <p>Album ID: {photo.albumId}</p>
-      <button className="backBtn" onClick={() => navigate("/src/pages/Home.jsx")}>Back to Home</button>
+      <Link to="/"><button className="b-btn-d">Back to Home</button></Link>
     </div>
   );
 }

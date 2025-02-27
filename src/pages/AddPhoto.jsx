@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./AddPhoto.css";
 
-function CreatePhoto({ addPhoto }) {
+function AddPhoto({ addPhoto }) {
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const navigate = useNavigate();
@@ -22,15 +23,15 @@ function CreatePhoto({ addPhoto }) {
 
   return (
     <div>
-      <h1>Add New Photo</h1>
-      <button className="backBtn" onClick={() => navigate("/")}>Back to Home</button>
+      <h1 className="n-photo">Add New Photo</h1>
+      <button className="b-btn" onClick={() => navigate("/")}>Back to Home</button>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
         <input type="text" placeholder="Image URL" value={url} onChange={(e) => setUrl(e.target.value)} required />
-        <button type="submit">Add Photo</button>
+        <button className="s-btn" type="submit">Add Photo</button>
       </form>
     </div>
   );
 }
 
-export default CreatePhoto;
+export default AddPhoto;
