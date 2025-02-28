@@ -30,6 +30,11 @@
     background-color: #dc3545;
     color: white;
   }
+
+  .e-btn{
+    background-color: #c3c7ca;
+    color: white;
+  }
   
   .delete-btn:hover {
     background-color: #b52b38;

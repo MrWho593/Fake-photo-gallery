@@ -5,7 +5,9 @@ function Home({ photos, deletePhoto }) {
   return (
     <div>
       <h1 style={{textAlign: "center", fontSize:"60px"}} className="p-home">Photo Gallery</h1>
-      <Link to="/add"><button style={{marginLeft:"20px", backgroundColor:"#007bff", color:"white"}} className="a-btn">Add New Photo</button></Link>
+      <Link to="/add">
+        <button style={{marginLeft:"20px", backgroundColor:"#007bff", color:"white"}} className="a-btn">Add New Photo</button>
+      </Link>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px" }}>
         {photos.map(photo => (
           <div key={photo.id} style={{ border: "1px solid #ddd", borderRadius: "10px", padding: "10px" }}>

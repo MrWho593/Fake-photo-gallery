@@ -5,7 +5,7 @@ import "./EditPhoto.css";
 function EditPhoto({ photos, updatePhoto }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const existingPhoto = photos.find(photo => photo.id.toString() === id);
+  const existingPhoto = photos.find((photo) => photo.id.toString() === id);
 
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
@@ -16,7 +16,7 @@ function EditPhoto({ photos, updatePhoto }) {
       setTitle(existingPhoto.title);
       setUrl(existingPhoto.url);
     } else {
-      navigate("/"); // Redirect if photo not found
+      navigate("/");
     }
   }, [existingPhoto, navigate]);
 
@@ -31,10 +31,10 @@ function EditPhoto({ photos, updatePhoto }) {
   return (
     <div className="edit-photo-container">
       <h1 className="e-photo">Edit Photo</h1>
-      
+
       <form onSubmit={handleSubmit} className="edit-photo-form">
         <label htmlFor="title">Title</label>
-        <input 
+        <input
           id="title"
           type="text"
           value={title}
@@ -42,11 +42,11 @@ function EditPhoto({ photos, updatePhoto }) {
             setTitle(e.target.value);
             setIsChanged(true);
           }}
-          required 
+          required
         />
 
         <label htmlFor="url">Image URL</label>
-        <input 
+        <input
           id="url"
           type="text"
           value={url}
@@ -54,12 +54,15 @@ function EditPhoto({ photos, updatePhoto }) {
             setUrl(e.target.value);
             setIsChanged(true);
           }}
-          required 
+          required
         />
 
-        <button className="s-btn" type="submit" disabled={!isChanged}>Update</button>
-        <button className="b-btn" onClick={() => navigate("/")}>Back to Home</button>
-
+        <button className="s-btn" type="submit" disabled={!isChanged}>
+          Update
+        </button>
+        <button className="b-btn" onClick={() => navigate("/")}>
+          Back to Home
+        </button>
       </form>
     </div>
   );
