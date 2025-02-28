@@ -1,18 +1,72 @@
-.photo-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+/* PhotoDetails.css */
+
+/* General styling for the container */
+div {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the heading */
+.p-details {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for the image */
+img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the album ID text */
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Styling for the back button */
+.b-btn-d {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.b-btn-d:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  div {
+    padding: 10px;
   }
-  
-  .photo-details img {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  .p-details {
+    font-size: 1.5rem;
   }
-  
-  .photo-details p {
-    font-size: 16px;
-    color: #666;
+
+  img {
+    width: 100%;
+    max-width: 300px;
   }
-  
+
+  p {
+    font-size: 1rem;
+  }
+
+  .b-btn-d {
+    font-size: 0.9rem;
+  }
+}

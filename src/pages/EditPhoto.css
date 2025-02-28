@@ -1,20 +1,91 @@
-.edit-photo {
-  max-width: 400px;
-  margin: 50px auto;
+.edit-photo-container {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.edit-photo input {
-  width: 100%;
+.e-photo {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.b-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.b-btn:hover {
+  background-color: #5a6268;
+}
+
+.edit-photo-form {
+  flex-direction: column;
+}
+
+.edit-photo-form label {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.edit-photo-form input {
   padding: 10px;
-  margin-bottom: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
 }
 
-.edit-photo button {
-  width: 100%;
+.edit-photo-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.s-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.s-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.s-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .edit-photo-container {
+    padding: 10px;
+  }
+
+  .e-photo {
+    font-size: 1.5rem;
+  }
+
+  .edit-photo-form input {
+    font-size: 0.9rem;
+  }
+
+  .b-btn, .s-btn {
+    font-size: 0.9rem;
+  }
 }

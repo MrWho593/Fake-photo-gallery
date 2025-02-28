@@ -1,11 +1,4 @@
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
-  }
-  
+
   .photo-card {
     background: white;
     padding: 10px;
@@ -30,11 +23,12 @@
   .button-group {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   
-  .delete-btn {
+  .d-btn {
     background-color: #dc3545;
+    color: white;
   }
   
   .delete-btn:hover {

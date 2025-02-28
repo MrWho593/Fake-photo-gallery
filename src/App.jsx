@@ -10,7 +10,7 @@ function App() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/photos?_limit=10")
+    axios.get("https://jsonplaceholder.typicode.com/photos?_limit=30")
       .then(response => setPhotos(response.data))
       .catch(error => console.error("Error fetching photos:", error));
   }, []);

@@ -31,7 +31,6 @@ function EditPhoto({ photos, updatePhoto }) {
   return (
     <div className="edit-photo-container">
       <h1 className="e-photo">Edit Photo</h1>
-      <button className="b-btn" onClick={() => navigate("/")}>Back to Home</button>
       
       <form onSubmit={handleSubmit} className="edit-photo-form">
         <label htmlFor="title">Title</label>
@@ -59,6 +58,8 @@ function EditPhoto({ photos, updatePhoto }) {
         />
 
         <button className="s-btn" type="submit" disabled={!isChanged}>Update</button>
+        <button className="b-btn" onClick={() => navigate("/")}>Back to Home</button>
+
       </form>
     </div>
   );
